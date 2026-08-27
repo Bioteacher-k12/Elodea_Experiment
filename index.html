@@ -38,7 +38,7 @@
         <div class="lg:col-span-4 bg-slate-800 p-5 rounded-2xl border border-slate-700 flex flex-col justify-between shadow-xl">
             <div>
                 <h2 class="text-lg font-bold text-white mb-4 flex items-center gap-2 pb-2 border-b border-slate-700">
-                    🎛️ Independent Variables
+                    🎛️ Variables
                 </h2>
                 
                 <!-- Variable 1: Light Intensity -->
@@ -403,7 +403,7 @@
             };
             
             if (light > 0) {
-                const lampX = 40 + (100 - light) * 1.5; // moves further away
+                const lampX = 40 + light; // higher intensity moves lamp closer (up to x=140)
                 labCtx.fillStyle = colors[filter];
                 labCtx.beginPath();
                 labCtx.moveTo(lampX, 30);
